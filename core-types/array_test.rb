@@ -7,14 +7,14 @@ class ArrayTest < Minitest::Homework
   be_gentle!
 
   def test_empty
-    assert_equal __, [].empty?
-    assert_equal __, [1,2,3].empty?
+    assert_equal true, [].empty?
+    assert_equal false, [1,2,3].empty?
   end
 
   def test_first
-    assert_equal __, [].first
-    assert_equal __, [:a, :b, :c].first
-    assert_equal __, ["spoon"].first
+    assert_equal nil, [].first
+    assert_equal :a, [:a, :b, :c].first
+    assert_equal "spoon", ["spoon"].first
   end
 
   def test_last
