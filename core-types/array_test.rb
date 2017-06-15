@@ -253,31 +253,31 @@ class ArrayTest < Minitest::Homework
     protein = ["fish", "bacon", "chicken", "bacon", "bacon", "steak"]
 
     deleted = protein.delete("fish")
-    assert_equal __, deleted
-    assert_equal __, protein
+    assert_equal "fish", deleted
+    assert_equal ["bacon", "chicken", "bacon", "bacon", "steak"], protein
 
     deleted = protein.delete("bacon")
-    assert_equal __, deleted
-    assert_equal __, protein
+    assert_equal "bacon", deleted
+    assert_equal ["fish", "chicken", "steak"], protein
   end
 
   def test_delete_at
     veggies = ["carrot", "parsnip", "courgette"]
     veggie = veggies.delete_at(1)
-    assert_equal __, veggie
-    assert_equal __, veggies
+    assert_equal "parsnip", veggie
+    assert_equal ["carrot", "courgette"], veggies
   end
 
   def test_compact
-    assert_equal __, ["a", "b", "c"].compact
-    assert_equal __, ["a", nil, "b", "c", nil, nil].compact
-    assert_equal __, [nil].compact
+    assert_equal ["a", "b", "c"], ["a", "b", "c"].compact
+    assert_equal ["a", "b", "c"], ["a", nil, "b", "c", nil, nil].compact
+    assert_equal [], [nil].compact
   end
 
   def test_flatten
-    assert_equal __, [:a, :b, :c].flatten
-    assert_equal __, [:a, [:b, :c]].flatten
-    assert_equal __, [:a, [:b, [:c]], [:d], :e, [:f, :g]].flatten
+    assert_equal [:a, :b, :c], [:a, :b, :c].flatten
+    assert_equal [:a, :b, :c], [:a, [:b, :c]].flatten
+    assert_equal [:a, :b, :c, :d, :e, :f, :g], [:a, [:b, [:c]], [:d], :e, [:f, :g]].flatten
   end
 
   # Uhm. Halp?
