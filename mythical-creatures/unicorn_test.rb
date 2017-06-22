@@ -11,7 +11,7 @@ class UnicornTest < Minitest::Test
   end
 
   def test_it_is_white_by_default
-    skip
+    # skip
     unicorn = Unicorn.new("Margaret")
     assert_equal "white", unicorn.color
     assert_equal true, unicorn.white?
